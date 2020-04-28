@@ -5,6 +5,7 @@ This program will dump out your calculated sub points to a text file to be displ
 - You need Java installed.
 - Edit the settings file to your liking. You must include your broadcaster ID and oAuth code. 
 - You can generate your oAuth using: https://twitchapps.com/tokengen/
+
    They do not get your oAuth token (and neither do I for that matter), it makes the call in your browser only.
 
 ### Running
