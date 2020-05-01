@@ -30,6 +30,7 @@ public class Subscribers {
             con.setConnectTimeout(10000);
             con.setReadTimeout(10000);
             con.setRequestProperty("Authorization", "Bearer " + settings.getoAuth());
+            con.setRequestProperty("Client-ID", settings.getClientId());
             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
             String inputLine;
             StringBuffer content = new StringBuffer();

@@ -16,6 +16,9 @@ public class Settings {
     private final String P_OAUTH = "oauth";
     private String oAuth;
 
+    private final String P_CLIENT_ID = "clientId";
+    private String clientId;
+
     private final String P_SUB_ENDPOINT = "endpoint";
     private String endpoint;
 
@@ -57,6 +60,12 @@ public class Settings {
         if(null == oAuth) {
             System.out.println("Settings property " + P_OAUTH + " is null, the program will not operate without this!");
             throw new IOException(P_OAUTH + " is not set in the settings file.");
+        }
+
+        clientId = p.getProperty(P_CLIENT_ID);
+        if(null == clientId) {
+            System.out.println("Settings property " + P_CLIENT_ID + " is null, the program will not operate without this!");
+            throw new IOException(P_CLIENT_ID + " is not set in the settings file.");
         }
 
         endpoint = p.getProperty(P_SUB_ENDPOINT);
@@ -122,6 +131,8 @@ public class Settings {
     public String getoAuth() {
         return oAuth;
     }
+
+    public String getClientId() {return clientId; }
 
     public String getEndpoint() {
         return endpoint;
